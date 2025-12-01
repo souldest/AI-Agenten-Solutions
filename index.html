@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,12 +9,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f1724;--card:#0b1220;--accent:#4a4aff;--muted:#9aa4b2;--glass: rgba(255,255,255,0.04);}
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#4a4aff;
+  --muted:#9aa4b2;
+  --glass: rgba(255,255,255,0.04);
+}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#071023);color:#e6eef8;line-height:1.5;}
-header{position:sticky;top:0;background:rgba(5,8,15,0.6);backdrop-filter: blur(6px);display:flex;justify-content:space-between;align-items:center;padding:18px 28px;z-index:1000;}
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#071023);
+  color:#e6eef8;
+  line-height:1.5;
+}
+header{
+  position:sticky;
+  top:0;
+  background:rgba(5,8,15,0.6);
+  backdrop-filter: blur(6px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  z-index:1000;
+}
 .brand{display:flex;align-items:center;gap:12px;}
-.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#6a6aff);display:flex;align-items:center;justify-content:center;font-weight:700;}
+.logo{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),#6a6aff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
 nav a{color:#cfe3ff;margin-left:18px;text-decoration:none;font-weight:600;}
 .container{max-width:1200px;margin:0 auto;padding:40px 20px;}
 #hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:60px 0;}
@@ -27,9 +58,29 @@ nav a{color:#cfe3ff;margin-left:18px;text-decoration:none;font-weight:600;}
 .feature{background:var(--glass);padding:12px;border-radius:10px;}
 section h2{font-size:26px;margin-bottom:6px;}
 .agents-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:6px;}
-.agent-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .25s ease,box-shadow .25s ease;}
-.agent-card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,0.5);}
-.agent-icon{font-size:24px;color:var(--accent);margin-bottom:4px;}
+.agent-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.agent-card:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:0 16px 32px rgba(0,0,0,0.6);
+}
+.agent-icon{
+  font-size:28px;
+  color:var(--accent);
+  margin-bottom:8px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition: transform 0.3s ease;
+}
+.agent-card:hover .agent-icon{
+  transform: scale(1.15);
+}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
 .badge{background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;font-weight:600;color:#d7e6ff;}
 #kontakt form{display:grid;gap:8px;}
@@ -60,7 +111,21 @@ footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px;mar
 <section id="hero">
   <div class="hero-left">
     <h1>Autonome KI-Agenten, die Ihr Business voranbringen</h1>
-    <p class="hero-lead">Wir liefern maßgeschneiderte Agenten für Vertrieb, Support, Finanzen, ESG und Daten‑Engineering — sicher, skalierbar und sofort einsetzbar.</p>
+    <p class="hero-lead">Maßgeschneiderte Agenten für:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;">
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-brain"></i> KI</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-desktop"></i> IT</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-chart-line"></i> Finanzen</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-piggy-bank"></i> Banken</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-file-contract"></i> Versicherung</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-shipping-fast"></i> Logistik</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-carrot"></i> Lebensmittel</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-tractor"></i> Agrar</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-handshake"></i> Dienstleister</div>
+      <div style="display:flex;align-items:center;gap:6px;"><i class="fas fa-user-pen"></i> Freelancer</div>
+    </div>
+    <p style="margin-top:12px;color:var(--muted);font-weight:600;">Sicher, skalierbar, sofort einsetzbar.</p>
+
     <div class="cta-row">
       <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView()">Demo anfragen</button>
       <button class="btn secondary" onclick="window.location='#technologien'">Technologien ansehen</button>
@@ -69,21 +134,6 @@ footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px;mar
       <div class="feature">Schnelle Implementierung (Pilot in 7–14 Tagen)</div>
       <div class="feature">DSGVO & Security by Design</div>
       <div class="feature">On‑Premise, Cloud oder Hybrid</div>
-    </div>
-    <div>
-      <strong>Technologie-Stack:</strong>
-      <div class="badges">
-        <div class="badge">FastAPI</div>
-        <div class="badge">React</div>
-        <div class="badge">PostgreSQL</div>
-        <div class="badge">MySQL</div>
-        <div class="badge">MongoDB</div>
-        <div class="badge">AWS</div>
-        <div class="badge">Azure</div>
-        <div class="badge">GCP</div>
-        <div class="badge">OpenAI</div>
-        <div class="badge">HuggingFace</div>
-      </div>
     </div>
   </div>
   <aside class="hero-right">
@@ -96,18 +146,15 @@ footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px;mar
 <section id="agenten" class="section">
 <h2>Unsere Agenten</h2>
 <div class="agents-grid">
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-chart-line"></i></div><h4>Datenanalyse-Agent</h4><p>Automatisiert Berichte, Visualisierungen & KPIs.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-database"></i></div><h4>Data Engineer Agent</h4><p>Pipeline-Management, ETL & Cloud-Sync.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-leaf"></i></div><h4>ESG-Agent</h4><p>Erfasst ESG-Daten & unterstützt Reporting.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-file-alt"></i></div><h4>Nachhaltigkeitsbericht-Agent</h4><p>Automatisierte Berichte, Prüfpfade & Exportformate.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-receipt"></i></div><h4>Buchhaltungs-Agent</h4><p>Belegerkennung, Kontierung, Monatsabschlüsse.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-wallet"></i></div><h4>Finanz-Agent</h4><p>Forecasting, Liquiditätsplanung & Simulationen.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-university"></i></div><h4>Banken-Agent</h4><p>Kreditprüfung, Scoring & Fraud-Monitoring.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-calculator"></i></div><h4>Controlling-Agent</h4><p>Kostenanalysen, Budgeting & Soll-Ist-Vergleiche.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-headset"></i></div><h4>Support-Agent</h4><p>24/7 Kundenbetreuung, Tickettriage & Eskalation.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-bullhorn"></i></div><h4>Marketing-Agent</h4><p>Content, Ads & Social Media Automatisierung.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-people-arrows"></i></div><h4>Sales-Agent</h4><p>Prospecting, Outreach & Terminvereinbarung.</p></div>
-  <div class="agent-card"><div class="agent-icon"><i class="fas fa-users"></i></div><h4>CrewAI Team-Agenten</h4><p>Orchestrierte Agenten-Teams lösen komplexe Workflows.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-desktop"></i></div><h4>IT-Agent</h4><p>Automatisierung von IT-Workflows, Monitoring & DevOps.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-brain"></i></div><h4>KI-Agent</h4><p>Machine Learning, Datenanalyse & LLM-Integration.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-piggy-bank"></i></div><h4>Banken-Agent</h4><p>Kreditprüfung, Scoring & Fraud-Monitoring.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-file-contract"></i></div><h4>Versicherungs-Agent</h4><p>Policenverwaltung, Schadenbearbeitung & Risikoanalysen.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-shipping-fast"></i></div><h4>Logistik-Agent</h4><p>Transportplanung, Lagersteuerung & Lieferkettenoptimierung.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-carrot"></i></div><h4>Lebensmittel-Agent</h4><p>Supply Chain, Qualitätskontrolle & Produkttracking.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-tractor"></i></div><h4>Agrar-Agent</h4><p>Bodenanalyse, Ernteplanung & Agrardatenmanagement.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-handshake"></i></div><h4>Dienstleister-Agent</h4><p>Workflow-Automatisierung für Services & Kundenmanagement.</p></div>
+  <div class="agent-card"><div class="agent-icon"><i class="fas fa-user-pen"></i></div><h4>Freelancer-Agent</h4><p>Projektmanagement, Zeiterfassung & Aufgabenautomatisierung.</p></div>
 </div>
 <p style="margin-top:10px;color:var(--muted)"><strong>Für Hosting und Agenten bieten wir sichere Lösungen in SaaS, AWS, Azure und Google Cloud.</strong></p>
 </section>
@@ -119,7 +166,8 @@ footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px;mar
   <div class="agent-card"><h4>Code & Backend</h4><p>Python (FastAPI), Node.js, REST/GraphQL, Docker, Kubernetes.</p></div>
   <div class="agent-card"><h4>Frontend & UX</h4><p>React, Next.js, Tailwind CSS, Responsive Design.</p></div>
   <div class="agent-card"><h4>No-Code / Automation</h4><p>ChatGPT, n8n, Make, AutoGen, Dify, MindStudio – schnelle Prototypen & Automationen.</p></div>
-  <div class="agent-card"><h4>LLM & Datenbanken</h4><p>Interne LLM-Plattform, PostgreSQL, MySQL, MariaDB, MongoDB, Oracle, Snowflake; Cloud-DBs auf AWS, Azure, GCP.</p></div>
+  <div class="agent-card"><h4>LLM / KI</h4><p>Interne LLM-Plattform, Fine-Tuning, Deployment eigener Modelle (Open-Source & Proprietär).</p></div>
+  <div class="agent-card"><h4>Datenbanken & Cloud</h4><p>PostgreSQL, MySQL, MariaDB, MongoDB, Oracle, Snowflake; Cloud-DBs auf AWS, Azure, GCP.</p></div>
 </div>
 </section>
 
@@ -165,7 +213,7 @@ footer{padding:24px 20px;text-align:center;color:var(--muted);font-size:14px;mar
 <!-- Impressum -->
 <section class="section">
 <h2>Impressum</h2>
-<p>AI Agents Solutions<br>Verantwortlich: Dr. Sigfried Weiss<br>Telefon: 0049 176/31591931<br>E-Mail: vertrieb@ai-agents-solutions.com<br>Steuernummer: 95 408 / 320 96</p>
+<p>AI Agents Solutions<br>Verantwortlich: Dr. Sigfried Weiss<br>Telefon: 0049 176/31591931<br>E-Mail: vertrieb@ai-agents-solutions.com<br>Steuernummer: 95 408 / 320 96<br>Finanzamt: Stuttgart II</p>
 </section>
 
 <!-- Datenschutz -->
@@ -204,4 +252,3 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 
 </body>
 </html>
-
